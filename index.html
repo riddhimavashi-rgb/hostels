@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HostelBite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#home" class="logo">🥗 HostelBite</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+  <nav id="navLinks" class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#planner">Meal Planner</a>
+    <a href="#tips">Tips</a>
+    <a href="#tracker">Tracker</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Eat Healthy, Even in the Hostel</h1>
+  <p>Simple, budget-friendly meal plans and daily habits for students living away from home.</p>
+  <a href="#planner" class="btn">Plan My Meals</a>
+</section>
+
+<section id="planner" class="section">
+  <h2>Weekly Meal Planner</h2>
+  <p class="sub">Pick a day to see a healthy plan that works with mess food and a small budget.</p>
+  <div class="tabs" id="dayTabs"></div>
+  <div class="cards" id="mealCards"></div>
+</section>
+
+<section id="tips" class="section alt">
+  <h2>Quick Health Tips</h2>
+  <div class="carousel">
+    <button class="arrow" id="prevBtn" aria-label="Previous">‹</button>
+    <div class="slide" id="slide"></div>
+    <button class="arrow" id="nextBtn" aria-label="Next">›</button>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<section id="tracker" class="section">
+  <h2>My Daily Tracker</h2>
+  <div class="tracker-grid">
+    <div class="panel">
+      <h3>💧 Water Intake</h3>
+      <p class="big"><span id="waterCount">0</span> / 8 glasses</p>
+      <div class="bar"><div id="waterBar"></div></div>
+      <button class="btn small" id="addWater">+ Add Glass</button>
+      <button class="btn small ghost" id="resetWater">Reset</button>
+    </div>
+    <div class="panel">
+      <h3>✅ Today's Checklist</h3>
+      <label><input type="checkbox" class="check"> Ate a proper breakfast</label>
+      <label><input type="checkbox" class="check"> Had a fruit or salad</label>
+      <label><input type="checkbox" class="check"> Skipped junk food</label>
+      <label><input type="checkbox" class="check"> Had protein (dal, egg, paneer)</label>
+      <p id="checkMsg" class="msg"></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <h2>Share Your Feedback</h2>
+  <form id="feedbackForm" class="form">
+    <input type="text" id="name" placeholder="Your name" required>
+    <textarea id="message" rows="3" placeholder="Suggest a healthy hostel recipe or tip..." required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <p id="formMsg" class="msg"></p>
+  </form>
+</section>
+
+<footer>© 2026 HostelBite · Made for hostel students</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
